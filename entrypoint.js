@@ -1,6 +1,6 @@
 const TOKEN = `Bearer ${Deno.env.get("token")}`;
 
-Deno.serve(async (req: Request) => {
+Deno.serve(async (req, Request) => {
   const targetUrl = req.headers.get("x-target-url");
   const token = req.headers.get("Authorization");
   const contentType = req.headers.get("Content-Type")
